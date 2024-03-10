@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:20:43 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/10 23:22:51 by dmodrzej         ###   ########.fr       */
+/*   Created: 2024/03/10 21:36:23 by dmodrzej          #+#    #+#             */
+/*   Updated: 2024/03/10 23:23:53 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+void	ft_putchar(char c)
 {
-	unsigned int	len;
-	unsigned int	i;
-	va_list			args;
+	write(1, &c, 1);
+}
 
-	len = 0;
-	i = 0;
-	va_start(args, str);
-	while (str[i] != '\0')
-	{
-		if (str[i] != '%')
-		{
-			ft_putchar(str[i]);
-			i++;
-			len++;
-		}
-		else
-		{
-			i++;
-			len += ft_putformat(args, str[i]);
-			i++;
-		}
-	}
-	va_end(args);
-	return (len);
+int	ft_putformat(va_list args, char c)
+{
+	if (c == 'c')
+		return ();
+	if (c == 's')
+		return ();
+	if (c == 'p')
+		return ();
+	if (c == 'd')
+		return ();
+	if (c == 'i')
+		return ();
+	if (c == 'u')
+		return ();
+	if (c == 'x')
+		return ();
+	if (c == 'X')
+		return ();
+	if (c == '%')
+		return ();
+	return (-1);
 }
