@@ -6,11 +6,39 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:20:43 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/10 23:22:51 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/11 19:22:25 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	ft_putformat(va_list args, const char c)
+{
+	void	*ptr;
+
+	if (c == 'c')
+		return (ft_putchar(va_arg(args, char)));
+	if (c == 's')
+		return (ft_putstr(va_arg(args, char *)));
+	if (c == 'p')
+	{
+		ptr = va_arg(args, void *);
+		if (!ptr)
+			return (ft_putstr("0x0"));
+		return (ft_putpointer(ptr));
+	}
+	if (c == 'd' || c == 'i')
+		return (ft_putnbr(va_arg(args, int)));
+	if (c == 'u')
+		return (ft_putunsigned(va_arg(args, unsigned int)));
+	if (c == 'x')
+		return (ft_putnbrhex(va_arg(args, int), c));
+	if (c == 'X')
+		return (ft_putnbrhex(va_arg(args, int), c));
+	if (c == '%')
+		return (ft_putchar('%'));
+	return (-1);
+}
 
 int	ft_printf(const char *str, ...)
 {
@@ -23,18 +51,14 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	while (str[i] != '\0')
 	{
-		if (str[i] != '%')
-		{
-			ft_putchar(str[i]);
-			i++;
-			len++;
-		}
-		else
+		if (str[i] == '%' && ft_strchr("cspdiuxX%", str[i + 1]) != 0)
 		{
 			i++;
 			len += ft_putformat(args, str[i]);
-			i++;
 		}
+		else
+			len += ft_putchar(str[i]);
+		i++;
 	}
 	va_end(args);
 	return (len);

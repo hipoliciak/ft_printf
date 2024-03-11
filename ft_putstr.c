@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 21:36:23 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/10 23:23:53 by dmodrzej         ###   ########.fr       */
+/*   Created: 2024/03/11 19:22:54 by dmodrzej          #+#    #+#             */
+/*   Updated: 2024/03/11 19:23:22 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putstr(char *str)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-int	ft_putformat(va_list args, char c)
-{
-	if (c == 'c')
-		return ();
-	if (c == 's')
-		return ();
-	if (c == 'p')
-		return ();
-	if (c == 'd')
-		return ();
-	if (c == 'i')
-		return ();
-	if (c == 'u')
-		return ();
-	if (c == 'x')
-		return ();
-	if (c == 'X')
-		return ();
-	if (c == '%')
-		return ();
-	return (-1);
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i] != '\0')
+		write(1, &str[i++], 1);
+	return (i);
 }
