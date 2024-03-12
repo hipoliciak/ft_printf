@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:34:20 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/11 19:19:52 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:19:34 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 int		ft_printf(const char *str, ...);
 int		ft_putchar(char c);

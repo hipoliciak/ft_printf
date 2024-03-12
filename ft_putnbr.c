@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 17:45:19 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/11 20:03:08 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:55:03 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_putnbr(int n)
 	int		len;
 	char	*base;
 
-	len = 0;
+	len = 0;	
+	base = "0123456789";
 	if (n == -2147483648)
 	{
 		ft_putstr("-2147483648");
@@ -29,7 +30,7 @@ int	ft_putnbr(int n)
 		n = -n;
 	}
 	if (n >= 10)
-		ft_putnbr(n / 10);
+		len += ft_putnbr(n / 10);
 	len += ft_putchar(base[n % 10]);
 	return (len);
 }

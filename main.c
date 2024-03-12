@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 22:36:14 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/10 23:08:13 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:25:40 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	char str[100] = "All work, no play";
 	void *ptr = &c;
 	int dec = 2137;
-	int n = -1234;
+	int n = -12774;
 	unsigned int u = 333;
 	int x = 42;
 	int y = 42;
@@ -27,7 +27,7 @@ int	main(void)
 	printf("%c\n", c);
 	ft_printf("%c\n", c);
 	printf("%s\n", str);
-	ft_printf(str);
+	ft_printf("%s\n", str);
 	printf("%p\n", ptr);
 	ft_printf("%p\n", ptr);
 	printf("%d\n", dec);
@@ -41,6 +41,6 @@ int	main(void)
 	printf("%X\n", y);
 	ft_printf("%X\n", y);
 	printf("%%\n");
-	ft_printf("%%\n");
+	ft_printf("%%");
 	return (0);
 }

@@ -6,18 +6,36 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:20:43 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/11 19:22:25 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:16:15 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+char	*ft_strchr(const char *str, int c)
+{
+	unsigned int	i;
+	char			*find;
+
+	find = (char *)str;
+	i = 0;
+	while (find[i] != '\0')
+	{
+		if ((unsigned char)find[i] == (unsigned char)c)
+			return (&find[i]);
+		i++;
+	}
+	if (c == '\0')
+		return (&find[i]);
+	return (0);
+}
 
 static int	ft_putformat(va_list args, const char c)
 {
 	void	*ptr;
 
 	if (c == 'c')
-		return (ft_putchar(va_arg(args, char)));
+		return (ft_putchar(va_arg(args, int)));
 	if (c == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	if (c == 'p')
