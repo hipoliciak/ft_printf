@@ -6,11 +6,12 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 22:36:14 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/13 18:36:28 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 23:34:49 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stddef.h>
 #include "ft_printf.h"
 
 int	main(void)
@@ -22,6 +23,7 @@ int	main(void)
 	char str1[100] = "All work,\0 no0 play";
 	char str2[100] = "";
 	char str3[100] = "\0";
+	char *str4 = NULL;
 	void *ptr = &c;
 	void *ptr2 = NULL;
 	int dec = 2137;
@@ -52,6 +54,8 @@ int	main(void)
 	ft_printf("%s\n", str2);
 	printf("%s\n", str3);
 	ft_printf("%s\n", str3);
+	printf("%s\n", str4);
+	ft_printf("%s\n", str4);
 	printf("%p\n", ptr);
 	ft_printf("%p\n", ptr);
 	printf("%p\n", ptr2);

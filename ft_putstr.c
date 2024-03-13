@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:22:54 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/11 19:23:22 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:56:32 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
-		return (0);
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (str[i] != '\0')
 		write(1, &str[i++], 1);
 	return (i);
