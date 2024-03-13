@@ -6,13 +6,13 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 18:17:44 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/12 21:54:55 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:24:50 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbrhex(int n, char c)
+int	ft_putnbrhex(unsigned int n, char c)
 {
 	char	*base;
 	int		len;

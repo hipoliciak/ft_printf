@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:20:43 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/12 21:16:15 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:19:05 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	ft_putformat(va_list args, const char c)
 	{
 		ptr = va_arg(args, void *);
 		if (!ptr)
-			return (ft_putstr("0x0"));
+			return (ft_putstr("(nil)"));
 		return (ft_putpointer(ptr));
 	}
 	if (c == 'd' || c == 'i')
@@ -50,9 +50,9 @@ static int	ft_putformat(va_list args, const char c)
 	if (c == 'u')
 		return (ft_putunsigned(va_arg(args, unsigned int)));
 	if (c == 'x')
-		return (ft_putnbrhex(va_arg(args, int), c));
+		return (ft_putnbrhex(va_arg(args, unsigned int), c));
 	if (c == 'X')
-		return (ft_putnbrhex(va_arg(args, int), c));
+		return (ft_putnbrhex(va_arg(args, unsigned int), c));
 	if (c == '%')
 		return (ft_putchar('%'));
 	return (-1);

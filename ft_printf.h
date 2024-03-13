@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:34:20 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/12 21:19:34 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:25:10 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int		ft_printf(const char *str, ...);
 int		ft_putchar(char c);
 int		ft_putnbr(int n);
-int		ft_putnbrhex(int n, char c);
+int		ft_putnbrhex(unsigned int n, char c);
 int		ft_putpointer(void *ptr);
 int		ft_putstr(char *str);
 int		ft_putunsigned(unsigned int n);
