@@ -6,12 +6,11 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 22:36:14 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/13 23:34:49 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/13 23:45:11 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stddef.h>
 #include "ft_printf.h"
 
 int	main(void)
