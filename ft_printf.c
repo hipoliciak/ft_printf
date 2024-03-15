@@ -6,13 +6,13 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:20:43 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/13 18:19:05 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:44:46 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_strchr(const char *str, int c)
+static char	*ft_strchr(const char *str, int c)
 {
 	unsigned int	i;
 	char			*find;
